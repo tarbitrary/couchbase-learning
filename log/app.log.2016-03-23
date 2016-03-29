@@ -1,0 +1,482 @@
+Using SLF4J as the default logging framework
+Using SLF4J as the default logging framework
+-Dio.netty.eventLoopThreads: 8
+java.nio.Buffer.address: available
+sun.misc.Unsafe.theUnsafe: available
+sun.misc.Unsafe.copyMemory: available
+java.nio.Bits.unaligned: true
+Platform: Windows
+Java version: 8
+-Dio.netty.noUnsafe: false
+sun.misc.Unsafe: available
+-Dio.netty.noJavassist: false
+Javassist: unavailable
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+-Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+-Dio.netty.bitMode: 32 (sun.arch.data.model)
+-Dio.netty.noPreferDirect: false
+-Dio.netty.noKeySetOptimization: false
+-Dio.netty.selectorAutoRebuildThreshold: 512
+CouchbaseEnvironment: {sslEnabled=false, sslKeystoreFile='null', sslKeystorePassword='null', queryEnabled=false, queryPort=8093, bootstrapHttpEnabled=true, bootstrapCarrierEnabled=true, bootstrapHttpDirectPort=8091, bootstrapHttpSslPort=18091, bootstrapCarrierDirectPort=11210, bootstrapCarrierSslPort=11207, ioPoolSize=4, computationPoolSize=4, responseBufferSize=16384, requestBufferSize=16384, kvServiceEndpoints=1, viewServiceEndpoints=1, queryServiceEndpoints=1, ioPool=NioEventLoopGroup, coreScheduler=CoreScheduler, eventBus=DefaultEventBus, packageNameAndVersion=couchbase-java-client/2.1.6 (git: 2.1.6), dcpEnabled=false, retryStrategy=BestEffort, maxRequestLifetime=75000, retryDelay=ExponentialDelay{growBy 1.0 MICROSECONDS; lower=100, upper=100000}, reconnectDelay=ExponentialDelay{growBy 1.0 MILLISECONDS; lower=32, upper=4096}, observeIntervalDelay=ExponentialDelay{growBy 1.0 MICROSECONDS; lower=10, upper=100000}, keepAliveInterval=30000, autoreleaseAfter=2000, bufferPoolingEnabled=true, socketConnectTimeout=1000, queryTimeout=75000, viewTimeout=75000, kvTimeout=2500, connectTimeout=20000, disconnectTimeout=25000, dnsSrvEnabled=false}
+Diagnostics {
+  gc.copy.collectionCount=2,
+  gc.copy.collectionTime=6,
+  gc.marksweepcompact.collectionCount=0,
+  gc.marksweepcompact.collectionTime=0,
+  heap.pendingFinalize=0,
+  heap.used=init = 16777216(16384K) used = 3022496(2951K) committed = 16252928(15872K) max = 259522560(253440K),
+  mem.physical.free=3029274624,
+  mem.physical.total=8490283008,
+  mem.swap.free=10658557952,
+  mem.swap.total=16978685952,
+  mem.virtual.comitted=34820096,
+  offHeap.used=init = 163840(160K) used = 2663360(2600K) committed = 4456448(4352K) max = -1(-1K),
+  proc.cpu.time=374402400,
+  runtime.name=4680@tarbitrary,
+  runtime.spec=Oracle Corporation/Java Virtual Machine Specification: 1.8,
+  runtime.startTime=1458719616499,
+  runtime.sysProperties={sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86, sun.jnu.encoding=GBK, java.class.path=D:\companyproject\companyworkspace\hps\couchbasetest\target\classes;F:\maven\repository\javax\javaee-web-api\6.0\javaee-web-api-6.0.jar;F:\maven\repository\org\slf4j\slf4j-log4j12\1.7.2\slf4j-log4j12-1.7.2.jar;F:\maven\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;F:\maven\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;F:\maven\repository\com\couchbase\client\java-client\2.1.6\java-client-2.1.6.jar;F:\maven\repository\com\couchbase\client\core-io\1.1.6\core-io-1.1.6.jar;F:\maven\repository\io\reactivex\rxjava\1.0.4\rxjava-1.0.4.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=32, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=Asia/Shanghai, os.name=Windows 7, java.vm.specification.version=1.8, user.country=CN, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=D:\work\Java\jdk1.8.0_72\jre\bin, sun.java.command=net.xicp.tarbitrary.couchbase.CouchBaseTest, sun.cpu.endian=little, user.home=C:\Users\Administrator, user.language=zh, java.specification.vendor=Oracle Corporation, java.home=D:\work\Java\jdk1.8.0_72\jre, file.separator=\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=D:\work\Java\jdk1.8.0_72\jre\lib\resources.jar;D:\work\Java\jdk1.8.0_72\jre\lib\rt.jar;D:\work\Java\jdk1.8.0_72\jre\lib\sunrsasign.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jsse.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jce.jar;D:\work\Java\jdk1.8.0_72\jre\lib\charsets.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jfr.jar;D:\work\Java\jdk1.8.0_72\jre\classes, user.script=, sun.management.compiler=HotSpot Client Compiler, java.runtime.version=1.8.0_72-b15, user.name=Administrator, path.separator=;, os.version=6.1, java.endorsed.dirs=D:\work\Java\jdk1.8.0_72\jre\lib\endorsed, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=GBK, sun.nio.ch.bugLevel=, java.vm.name=Java HotSpot(TM) Client VM, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\, java.version=1.8.0_72, user.dir=D:\companyproject\companyworkspace\hps\couchbasetest, os.arch=x86, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=Service Pack 1, java.library.path=D:\work\Java\jdk1.8.0_72\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/work/Java/jre1.8.0_72/bin/client;D:/work/Java/jre1.8.0_72/bin;D:/work/Java/jre1.8.0_72/lib/i386;C:\ProgramData\Oracle\Java\javapath;D:\work\Python34\;D:\work\Python34\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\work\myquicklink;D:\work\Java\jdk1.8.0_72\bin;D:\work\apache-ant-1.9.2\bin;D:\work\apache-maven-3.1.0-bin\apache-maven-3.1.0\bin;D:\work\app\Instant Client\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Subversion\bin;D:\work\Vim\vim74;D:\work\Git\cmd;D:\work\apache-ant-1.9.2\bin;D:\work\eclipse-jee-kepler-R-win32\eclipse;;., java.vm.info=mixed mode, sharing, java.vendor=Oracle Corporation, java.vm.version=25.72-b15, java.ext.dirs=D:\work\Java\jdk1.8.0_72\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0},
+  runtime.uptime=374,
+  runtime.vm=Oracle Corporation/Java HotSpot(TM) Client VM: 25.72-b15,
+  sys.cpu.loadAvg=-1.0,
+  sys.cpu.num=4,
+  sys.os.arch=x86,
+  sys.os.name=Windows 7,
+  sys.os.version=6.1,
+  thread.count=5,
+  thread.peakCount=5,
+  thread.startedCount=5
+}
+Setting seed hosts to [/192.168.46.31]
+Got instructed to open bucket default
+Loading Config for bucket default
+Loading Config for bucket default
+DNS Reverse Lookup of 192.168.46.31 is slow, took 9013ms
+Got instructed to add Node 192.168.46.31/192.168.46.31
+Connecting Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Got instructed to connect.
+Connect finished, registering for use.
+Successfully added Node 192.168.46.31/192.168.46.31
+Got instructed to add Service BINARY, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Adding Service BINARY to registry and connecting it.
+[192.168.46.31][KeyValueService]: Got instructed to connect.
+-Dio.netty.allocator.numHeapArenas: 2
+-Dio.netty.allocator.numDirectArenas: 2
+-Dio.netty.allocator.pageSize: 8192
+-Dio.netty.allocator.maxOrder: 11
+-Dio.netty.allocator.chunkSize: 16777216
+-Dio.netty.allocator.tinyCacheSize: 512
+-Dio.netty.allocator.smallCacheSize: 256
+-Dio.netty.allocator.normalCacheSize: 64
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[192.168.46.31][KeyValueService]: Initializing connect on Endpoint.
+-Dio.netty.initialSeedUniquifier: 0x841222dc90c880e2 (took 8 ms)
+-Dio.netty.allocator.type: unpooled
+-Dio.netty.threadLocalDirectBufferSize: 65536
+-Dio.netty.recycler.maxCapacity.default: 262144
+-Dcom.couchbase.client.deps.io.netty.leakDetectionLevel: simple
+[/192.168.46.31:11210][KeyValueEndpoint]: Connected Endpoint.
+Connected to Node 192.168.46.31
+Connected (CONNECTING) to Node 192.168.46.31/192.168.46.31
+Successfully enabled Service BINARY on Node 192.168.46.31/192.168.46.31
+Starting to discover config through Carrier Bootstrap
+Node 192.168.46.31/192.168.46.31 already registered, skipping.
+Successfully added Node 192.168.46.31/192.168.46.31
+Got instructed to add Service CONFIG, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Adding Service CONFIG to registry and connecting it.
+[192.168.46.31][ConfigService]: Got instructed to connect.
+Successfully enabled Service CONFIG on Node 192.168.46.31/192.168.46.31
+Starting to discover config through HTTP Bootstrap
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+Terse bucket config failed, falling back to verbose.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+Successfully loaded config through HTTP.
+Got configuration from Service, attempting to parse.
+Registering Bucket default to refresh at Loader HTTP
+Registering Bucket default for refresh.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+Applying new configuration DefaultCouchbaseBucketConfig{name='default', locator=null, uri='/pools/default/buckets/default?bucket_uuid=33a64da075fba66a8e9fc0ef572a11ca', streamingUri='/pools/default/bucketsStreaming/default?bucket_uuid=33a64da075fba66a8e9fc0ef572a11ca', nodeInfo=[NodeInfo{, hostname=/192.168.46.31, configPort=8091, directServices={VIEW=8092, CONFIG=8091, BINARY=11210}, sslServices={}}], partitionInfo=PartitionInfo{numberOfReplicas=1, partitionHosts=[192.168.46.31], partitions=[[m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]]], tainted=false}, tainted=false, rev=0}
+Got notified of a new configuration arriving.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+Starting reconfiguration.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+Starting reconfiguration for bucket default
+Node /192.168.46.31 already registered, skipping.
+Got instructed to add Service VIEW, to Node /192.168.46.31
+[192.168.46.31]: Adding Service VIEW
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+[192.168.46.31]: Adding Service VIEW to registry and connecting it.
+[192.168.46.31][ViewService]: Got instructed to connect.
+[192.168.46.31][ViewService]: Initializing connect on Endpoint.
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+Got instructed to add Service CONFIG, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Service CONFIG already added, skipping.
+Got instructed to add Service BINARY, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Service BINARY already added, skipping.
+Opened bucket default
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+Starting reconfiguration.
+Starting reconfiguration for bucket default
+Node 192.168.46.31/192.168.46.31 already registered, skipping.
+Got instructed to add Service VIEW, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service VIEW
+[192.168.46.31]: Service VIEW already added, skipping.
+Got instructed to add Service CONFIG, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Service CONFIG already added, skipping.
+Got instructed to add Service BINARY, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Service BINARY already added, skipping.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[/192.168.46.31:8092][ViewEndpoint]: Connected Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8092][ViewEndpoint]: Channel Active.
+test
+haha
+Using SLF4J as the default logging framework
+Using SLF4J as the default logging framework
+-Dio.netty.eventLoopThreads: 8
+java.nio.Buffer.address: available
+sun.misc.Unsafe.theUnsafe: available
+sun.misc.Unsafe.copyMemory: available
+java.nio.Bits.unaligned: true
+Platform: Windows
+Java version: 8
+-Dio.netty.noUnsafe: false
+sun.misc.Unsafe: available
+-Dio.netty.noJavassist: false
+Javassist: unavailable
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+-Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+-Dio.netty.bitMode: 32 (sun.arch.data.model)
+-Dio.netty.noPreferDirect: false
+-Dio.netty.noKeySetOptimization: false
+-Dio.netty.selectorAutoRebuildThreshold: 512
+CouchbaseEnvironment: {sslEnabled=false, sslKeystoreFile='null', sslKeystorePassword='null', queryEnabled=false, queryPort=8093, bootstrapHttpEnabled=true, bootstrapCarrierEnabled=true, bootstrapHttpDirectPort=8091, bootstrapHttpSslPort=18091, bootstrapCarrierDirectPort=11210, bootstrapCarrierSslPort=11207, ioPoolSize=4, computationPoolSize=4, responseBufferSize=16384, requestBufferSize=16384, kvServiceEndpoints=1, viewServiceEndpoints=1, queryServiceEndpoints=1, ioPool=NioEventLoopGroup, coreScheduler=CoreScheduler, eventBus=DefaultEventBus, packageNameAndVersion=couchbase-java-client/2.1.6 (git: 2.1.6), dcpEnabled=false, retryStrategy=BestEffort, maxRequestLifetime=75000, retryDelay=ExponentialDelay{growBy 1.0 MICROSECONDS; lower=100, upper=100000}, reconnectDelay=ExponentialDelay{growBy 1.0 MILLISECONDS; lower=32, upper=4096}, observeIntervalDelay=ExponentialDelay{growBy 1.0 MICROSECONDS; lower=10, upper=100000}, keepAliveInterval=30000, autoreleaseAfter=2000, bufferPoolingEnabled=true, socketConnectTimeout=1000, queryTimeout=75000, viewTimeout=75000, kvTimeout=2500, connectTimeout=20000, disconnectTimeout=25000, dnsSrvEnabled=false}
+Diagnostics {
+  gc.copy.collectionCount=2,
+  gc.copy.collectionTime=5,
+  gc.marksweepcompact.collectionCount=0,
+  gc.marksweepcompact.collectionTime=0,
+  heap.pendingFinalize=0,
+  heap.used=init = 16777216(16384K) used = 3002112(2931K) committed = 16252928(15872K) max = 259522560(253440K),
+  mem.physical.free=2179227648,
+  mem.physical.total=8490283008,
+  mem.swap.free=9461219328,
+  mem.swap.total=16978685952,
+  mem.virtual.comitted=30572544,
+  offHeap.used=init = 163840(160K) used = 5809040(5672K) committed = 6094848(5952K) max = -1(-1K),
+  proc.cpu.time=436802800,
+  runtime.name=3920@tarbitrary,
+  runtime.spec=Oracle Corporation/Java Virtual Machine Specification: 1.8,
+  runtime.startTime=1458724299141,
+  runtime.sysProperties={sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86, sun.jnu.encoding=GBK, java.class.path=D:\companyproject\companyworkspace\hps\couchbasetest\target\classes;F:\maven\repository\javax\javaee-web-api\6.0\javaee-web-api-6.0.jar;F:\maven\repository\org\slf4j\slf4j-log4j12\1.7.2\slf4j-log4j12-1.7.2.jar;F:\maven\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;F:\maven\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;F:\maven\repository\com\couchbase\client\java-client\2.1.6\java-client-2.1.6.jar;F:\maven\repository\com\couchbase\client\core-io\1.1.6\core-io-1.1.6.jar;F:\maven\repository\io\reactivex\rxjava\1.0.4\rxjava-1.0.4.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=32, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=Asia/Shanghai, os.name=Windows 7, java.vm.specification.version=1.8, user.country=CN, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=D:\work\Java\jdk1.8.0_72\jre\bin, sun.java.command=net.xicp.tarbitrary.couchbase.CouchBaseTest, sun.cpu.endian=little, user.home=C:\Users\Administrator, user.language=zh, java.specification.vendor=Oracle Corporation, java.home=D:\work\Java\jdk1.8.0_72\jre, file.separator=\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=D:\work\Java\jdk1.8.0_72\jre\lib\resources.jar;D:\work\Java\jdk1.8.0_72\jre\lib\rt.jar;D:\work\Java\jdk1.8.0_72\jre\lib\sunrsasign.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jsse.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jce.jar;D:\work\Java\jdk1.8.0_72\jre\lib\charsets.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jfr.jar;D:\work\Java\jdk1.8.0_72\jre\classes, user.script=, sun.management.compiler=HotSpot Client Compiler, java.runtime.version=1.8.0_72-b15, user.name=Administrator, path.separator=;, os.version=6.1, java.endorsed.dirs=D:\work\Java\jdk1.8.0_72\jre\lib\endorsed, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=GBK, sun.nio.ch.bugLevel=, java.vm.name=Java HotSpot(TM) Client VM, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\, java.version=1.8.0_72, user.dir=D:\companyproject\companyworkspace\hps\couchbasetest, os.arch=x86, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=Service Pack 1, java.library.path=D:\work\Java\jdk1.8.0_72\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/work/Java/jre1.8.0_72/bin/client;D:/work/Java/jre1.8.0_72/bin;D:/work/Java/jre1.8.0_72/lib/i386;C:\ProgramData\Oracle\Java\javapath;D:\work\Python34\;D:\work\Python34\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\work\myquicklink;D:\work\Java\jdk1.8.0_72\bin;D:\work\apache-ant-1.9.2\bin;D:\work\apache-maven-3.1.0-bin\apache-maven-3.1.0\bin;D:\work\app\Instant Client\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Subversion\bin;D:\work\Vim\vim74;D:\work\Git\cmd;D:\work\apache-ant-1.9.2\bin;D:\work\eclipse-jee-kepler-R-win32\eclipse;;., java.vm.info=mixed mode, java.vendor=Oracle Corporation, java.vm.version=25.72-b15, java.ext.dirs=D:\work\Java\jdk1.8.0_72\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0},
+  runtime.uptime=411,
+  runtime.vm=Oracle Corporation/Java HotSpot(TM) Client VM: 25.72-b15,
+  sys.cpu.loadAvg=-1.0,
+  sys.cpu.num=4,
+  sys.os.arch=x86,
+  sys.os.name=Windows 7,
+  sys.os.version=6.1,
+  thread.count=5,
+  thread.peakCount=5,
+  thread.startedCount=5
+}
+Setting seed hosts to [/192.168.46.31]
+Got instructed to open bucket default
+Loading Config for bucket default
+Loading Config for bucket default
+DNS Reverse Lookup of 192.168.46.31 is slow, took 9002ms
+Got instructed to add Node 192.168.46.31/192.168.46.31
+Connecting Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Got instructed to connect.
+Connect finished, registering for use.
+Successfully added Node 192.168.46.31/192.168.46.31
+Got instructed to add Service BINARY, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Adding Service BINARY to registry and connecting it.
+[192.168.46.31][KeyValueService]: Got instructed to connect.
+-Dio.netty.allocator.numHeapArenas: 2
+-Dio.netty.allocator.numDirectArenas: 2
+-Dio.netty.allocator.pageSize: 8192
+-Dio.netty.allocator.maxOrder: 11
+-Dio.netty.allocator.chunkSize: 16777216
+-Dio.netty.allocator.tinyCacheSize: 512
+-Dio.netty.allocator.smallCacheSize: 256
+-Dio.netty.allocator.normalCacheSize: 64
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[192.168.46.31][KeyValueService]: Initializing connect on Endpoint.
+-Dio.netty.initialSeedUniquifier: 0x179bba1734be7753 (took 10 ms)
+-Dio.netty.allocator.type: unpooled
+-Dio.netty.threadLocalDirectBufferSize: 65536
+-Dio.netty.recycler.maxCapacity.default: 262144
+-Dcom.couchbase.client.deps.io.netty.leakDetectionLevel: simple
+[/192.168.46.31:11210][KeyValueEndpoint]: Connected Endpoint.
+Connected to Node 192.168.46.31
+Connected (CONNECTING) to Node 192.168.46.31/192.168.46.31
+Successfully enabled Service BINARY on Node 192.168.46.31/192.168.46.31
+Starting to discover config through Carrier Bootstrap
+Node 192.168.46.31/192.168.46.31 already registered, skipping.
+Successfully added Node 192.168.46.31/192.168.46.31
+Got instructed to add Service CONFIG, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Adding Service CONFIG to registry and connecting it.
+[192.168.46.31][ConfigService]: Got instructed to connect.
+Successfully enabled Service CONFIG on Node 192.168.46.31/192.168.46.31
+Starting to discover config through HTTP Bootstrap
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+Terse bucket config failed, falling back to verbose.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+Successfully loaded config through HTTP.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+Got configuration from Service, attempting to parse.
+Registering Bucket default to refresh at Loader HTTP
+Registering Bucket default for refresh.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+Applying new configuration DefaultCouchbaseBucketConfig{name='default', locator=null, uri='/pools/default/buckets/default?bucket_uuid=33a64da075fba66a8e9fc0ef572a11ca', streamingUri='/pools/default/bucketsStreaming/default?bucket_uuid=33a64da075fba66a8e9fc0ef572a11ca', nodeInfo=[NodeInfo{, hostname=/192.168.46.31, configPort=8091, directServices={CONFIG=8091, BINARY=11210, VIEW=8092}, sslServices={}}], partitionInfo=PartitionInfo{numberOfReplicas=1, partitionHosts=[192.168.46.31], partitions=[[m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]]], tainted=false}, tainted=false, rev=0}
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+Got notified of a new configuration arriving.
+Starting reconfiguration.
+Starting reconfiguration for bucket default
+Node /192.168.46.31 already registered, skipping.
+Got instructed to add Service CONFIG, to Node /192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Service CONFIG already added, skipping.
+Got instructed to add Service BINARY, to Node /192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Service BINARY already added, skipping.
+Got instructed to add Service VIEW, to Node /192.168.46.31
+[192.168.46.31]: Adding Service VIEW
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+[192.168.46.31]: Adding Service VIEW to registry and connecting it.
+[192.168.46.31][ViewService]: Got instructed to connect.
+[192.168.46.31][ViewService]: Initializing connect on Endpoint.
+Opened bucket default
+Starting reconfiguration.
+Starting reconfiguration for bucket default
+Node 192.168.46.31/192.168.46.31 already registered, skipping.
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Got instructed to add Service CONFIG, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Service CONFIG already added, skipping.
+Got instructed to add Service BINARY, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Service BINARY already added, skipping.
+Got instructed to add Service VIEW, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service VIEW
+[192.168.46.31]: Service VIEW already added, skipping.
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+[/192.168.46.31:8092][ViewEndpoint]: Connected Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[/192.168.46.31:8092][ViewEndpoint]: Channel Active.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+≤‚ ‘ 
+Using SLF4J as the default logging framework
+Using SLF4J as the default logging framework
+-Dio.netty.eventLoopThreads: 8
+java.nio.Buffer.address: available
+sun.misc.Unsafe.theUnsafe: available
+sun.misc.Unsafe.copyMemory: available
+java.nio.Bits.unaligned: true
+Platform: Windows
+Java version: 8
+-Dio.netty.noUnsafe: false
+sun.misc.Unsafe: available
+-Dio.netty.noJavassist: false
+Javassist: unavailable
+You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+-Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+-Dio.netty.bitMode: 32 (sun.arch.data.model)
+-Dio.netty.noPreferDirect: false
+-Dio.netty.noKeySetOptimization: false
+-Dio.netty.selectorAutoRebuildThreshold: 512
+CouchbaseEnvironment: {sslEnabled=false, sslKeystoreFile='null', sslKeystorePassword='null', queryEnabled=false, queryPort=8093, bootstrapHttpEnabled=true, bootstrapCarrierEnabled=true, bootstrapHttpDirectPort=8091, bootstrapHttpSslPort=18091, bootstrapCarrierDirectPort=11210, bootstrapCarrierSslPort=11207, ioPoolSize=4, computationPoolSize=4, responseBufferSize=16384, requestBufferSize=16384, kvServiceEndpoints=1, viewServiceEndpoints=1, queryServiceEndpoints=1, ioPool=NioEventLoopGroup, coreScheduler=CoreScheduler, eventBus=DefaultEventBus, packageNameAndVersion=couchbase-java-client/2.1.6 (git: 2.1.6), dcpEnabled=false, retryStrategy=BestEffort, maxRequestLifetime=75000, retryDelay=ExponentialDelay{growBy 1.0 MICROSECONDS; lower=100, upper=100000}, reconnectDelay=ExponentialDelay{growBy 1.0 MILLISECONDS; lower=32, upper=4096}, observeIntervalDelay=ExponentialDelay{growBy 1.0 MICROSECONDS; lower=10, upper=100000}, keepAliveInterval=30000, autoreleaseAfter=2000, bufferPoolingEnabled=true, socketConnectTimeout=1000, queryTimeout=75000, viewTimeout=75000, kvTimeout=2500, connectTimeout=20000, disconnectTimeout=25000, dnsSrvEnabled=false}
+Diagnostics {
+  gc.copy.collectionCount=2,
+  gc.copy.collectionTime=6,
+  gc.marksweepcompact.collectionCount=0,
+  gc.marksweepcompact.collectionTime=0,
+  heap.pendingFinalize=0,
+  heap.used=init = 16777216(16384K) used = 2988960(2918K) committed = 16252928(15872K) max = 259522560(253440K),
+  mem.physical.free=2165399552,
+  mem.physical.total=8490283008,
+  mem.swap.free=9447526400,
+  mem.swap.total=16978685952,
+  mem.virtual.comitted=34717696,
+  offHeap.used=init = 163840(160K) used = 2663480(2601K) committed = 4456448(4352K) max = -1(-1K),
+  proc.cpu.time=468003000,
+  runtime.name=6620@tarbitrary,
+  runtime.spec=Oracle Corporation/Java Virtual Machine Specification: 1.8,
+  runtime.startTime=1458724331696,
+  runtime.sysProperties={sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86, sun.jnu.encoding=GBK, java.class.path=D:\companyproject\companyworkspace\hps\couchbasetest\target\classes;F:\maven\repository\javax\javaee-web-api\6.0\javaee-web-api-6.0.jar;F:\maven\repository\org\slf4j\slf4j-log4j12\1.7.2\slf4j-log4j12-1.7.2.jar;F:\maven\repository\org\slf4j\slf4j-api\1.7.2\slf4j-api-1.7.2.jar;F:\maven\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;F:\maven\repository\com\couchbase\client\java-client\2.1.6\java-client-2.1.6.jar;F:\maven\repository\com\couchbase\client\core-io\1.1.6\core-io-1.1.6.jar;F:\maven\repository\io\reactivex\rxjava\1.0.4\rxjava-1.0.4.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=32, user.variant=, java.vendor.url=http://java.oracle.com/, user.timezone=Asia/Shanghai, os.name=Windows 7, java.vm.specification.version=1.8, user.country=CN, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=D:\work\Java\jdk1.8.0_72\jre\bin, sun.java.command=net.xicp.tarbitrary.couchbase.CouchBaseTest, sun.cpu.endian=little, user.home=C:\Users\Administrator, user.language=zh, java.specification.vendor=Oracle Corporation, java.home=D:\work\Java\jdk1.8.0_72\jre, file.separator=\, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, sun.boot.class.path=D:\work\Java\jdk1.8.0_72\jre\lib\resources.jar;D:\work\Java\jdk1.8.0_72\jre\lib\rt.jar;D:\work\Java\jdk1.8.0_72\jre\lib\sunrsasign.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jsse.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jce.jar;D:\work\Java\jdk1.8.0_72\jre\lib\charsets.jar;D:\work\Java\jdk1.8.0_72\jre\lib\jfr.jar;D:\work\Java\jdk1.8.0_72\jre\classes, user.script=, sun.management.compiler=HotSpot Client Compiler, java.runtime.version=1.8.0_72-b15, user.name=Administrator, path.separator=;, os.version=6.1, java.endorsed.dirs=D:\work\Java\jdk1.8.0_72\jre\lib\endorsed, java.runtime.name=Java(TM) SE Runtime Environment, file.encoding=GBK, sun.nio.ch.bugLevel=, java.vm.name=Java HotSpot(TM) Client VM, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\, java.version=1.8.0_72, user.dir=D:\companyproject\companyworkspace\hps\couchbasetest, os.arch=x86, java.vm.specification.name=Java Virtual Machine Specification, java.awt.printerjob=sun.awt.windows.WPrinterJob, sun.os.patch.level=Service Pack 1, java.library.path=D:\work\Java\jdk1.8.0_72\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/work/Java/jre1.8.0_72/bin/client;D:/work/Java/jre1.8.0_72/bin;D:/work/Java/jre1.8.0_72/lib/i386;C:\ProgramData\Oracle\Java\javapath;D:\work\Python34\;D:\work\Python34\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\work\myquicklink;D:\work\Java\jdk1.8.0_72\bin;D:\work\apache-ant-1.9.2\bin;D:\work\apache-maven-3.1.0-bin\apache-maven-3.1.0\bin;D:\work\app\Instant Client\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Subversion\bin;D:\work\Vim\vim74;D:\work\Git\cmd;D:\work\apache-ant-1.9.2\bin;D:\work\eclipse-jee-kepler-R-win32\eclipse;;., java.vm.info=mixed mode, sharing, java.vendor=Oracle Corporation, java.vm.version=25.72-b15, java.ext.dirs=D:\work\Java\jdk1.8.0_72\jre\lib\ext;C:\Windows\Sun\Java\lib\ext, sun.io.unicode.encoding=UnicodeLittle, java.class.version=52.0},
+  runtime.uptime=416,
+  runtime.vm=Oracle Corporation/Java HotSpot(TM) Client VM: 25.72-b15,
+  sys.cpu.loadAvg=-1.0,
+  sys.cpu.num=4,
+  sys.os.arch=x86,
+  sys.os.name=Windows 7,
+  sys.os.version=6.1,
+  thread.count=5,
+  thread.peakCount=5,
+  thread.startedCount=5
+}
+Setting seed hosts to [/192.168.46.31]
+Got instructed to open bucket default
+Loading Config for bucket default
+Loading Config for bucket default
+DNS Reverse Lookup of 192.168.46.31 is slow, took 9001ms
+Got instructed to add Node 192.168.46.31/192.168.46.31
+Connecting Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Got instructed to connect.
+Connect finished, registering for use.
+Successfully added Node 192.168.46.31/192.168.46.31
+Got instructed to add Service BINARY, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Adding Service BINARY to registry and connecting it.
+[192.168.46.31][KeyValueService]: Got instructed to connect.
+-Dio.netty.allocator.numHeapArenas: 2
+-Dio.netty.allocator.numDirectArenas: 2
+-Dio.netty.allocator.pageSize: 8192
+-Dio.netty.allocator.maxOrder: 11
+-Dio.netty.allocator.chunkSize: 16777216
+-Dio.netty.allocator.tinyCacheSize: 512
+-Dio.netty.allocator.smallCacheSize: 256
+-Dio.netty.allocator.normalCacheSize: 64
+-Dio.netty.allocator.maxCachedBufferCapacity: 32768
+-Dio.netty.allocator.cacheTrimInterval: 8192
+[192.168.46.31][KeyValueService]: Initializing connect on Endpoint.
+-Dio.netty.initialSeedUniquifier: 0xe2a0b696be700fe1 (took 14 ms)
+-Dio.netty.allocator.type: unpooled
+-Dio.netty.threadLocalDirectBufferSize: 65536
+-Dio.netty.recycler.maxCapacity.default: 262144
+-Dcom.couchbase.client.deps.io.netty.leakDetectionLevel: simple
+[/192.168.46.31:11210][KeyValueEndpoint]: Connected Endpoint.
+Connected to Node 192.168.46.31
+Connected (CONNECTING) to Node 192.168.46.31/192.168.46.31
+Successfully enabled Service BINARY on Node 192.168.46.31/192.168.46.31
+Starting to discover config through Carrier Bootstrap
+Node 192.168.46.31/192.168.46.31 already registered, skipping.
+Successfully added Node 192.168.46.31/192.168.46.31
+Got instructed to add Service CONFIG, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Adding Service CONFIG to registry and connecting it.
+[192.168.46.31][ConfigService]: Got instructed to connect.
+Successfully enabled Service CONFIG on Node 192.168.46.31/192.168.46.31
+Starting to discover config through HTTP Bootstrap
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+Terse bucket config failed, falling back to verbose.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+Successfully loaded config through HTTP.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+Got configuration from Service, attempting to parse.
+Registering Bucket default to refresh at Loader HTTP
+Registering Bucket default for refresh.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+Applying new configuration DefaultCouchbaseBucketConfig{name='default', locator=null, uri='/pools/default/buckets/default?bucket_uuid=33a64da075fba66a8e9fc0ef572a11ca', streamingUri='/pools/default/bucketsStreaming/default?bucket_uuid=33a64da075fba66a8e9fc0ef572a11ca', nodeInfo=[NodeInfo{, hostname=/192.168.46.31, configPort=8091, directServices={BINARY=11210, CONFIG=8091, VIEW=8092}, sslServices={}}], partitionInfo=PartitionInfo{numberOfReplicas=1, partitionHosts=[192.168.46.31], partitions=[[m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]], [m: 0, r: [-1]]], tainted=false}, tainted=false, rev=0}
+Got notified of a new configuration arriving.
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+Starting reconfiguration.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+Starting reconfiguration for bucket default
+Node /192.168.46.31 already registered, skipping.
+Got instructed to add Service BINARY, to Node /192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Service BINARY already added, skipping.
+Got instructed to add Service CONFIG, to Node /192.168.46.31
+[192.168.46.31]: Adding Service CONFIG
+[192.168.46.31]: Service CONFIG already added, skipping.
+Got instructed to add Service VIEW, to Node /192.168.46.31
+[192.168.46.31]: Adding Service VIEW
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Disconnected Endpoint.
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+[192.168.46.31/192.168.46.31:8091][ConfigEndpoint]: Channel Inactive.
+[null][ConfigEndpoint]: Got notified from Channel as inactive.
+[192.168.46.31]: Adding Service VIEW to registry and connecting it.
+[192.168.46.31][ViewService]: Got instructed to connect.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Connected Endpoint.
+[192.168.46.31][ViewService]: Initializing connect on Endpoint.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+[/192.168.46.31:8091][ConfigEndpoint]: Channel Active.
+Opened bucket default
+Starting reconfiguration.
+Starting reconfiguration for bucket default
+Node 192.168.46.31/192.168.46.31 already registered, skipping.
+Got instructed to add Service BINARY, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service BINARY
+[192.168.46.31]: Service BINARY already added, skipping.
+Got instructed to add Service CONFIG, to Node 192.168.46.31/192.168.46.31
+[/192.168.46.31:8092][ViewEndpoint]: Connected Endpoint.
+[192.168.46.31]: Adding Service CONFIG
+Connected (DEGRADED) to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Service CONFIG already added, skipping.
+Got instructed to add Service VIEW, to Node 192.168.46.31/192.168.46.31
+[192.168.46.31]: Adding Service VIEW
+[/192.168.46.31:8092][ViewEndpoint]: Channel Active.
+[192.168.46.31]: Service VIEW already added, skipping.
+≤‚ ‘  ß∞‹, ¥ÌŒÛ–≈œ¢{}
