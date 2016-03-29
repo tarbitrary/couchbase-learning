@@ -15,9 +15,6 @@ import com.couchbase.client.java.AsyncBucket;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.CouchbaseCluster;
-import com.couchbase.client.java.bucket.BucketManager;
-import com.couchbase.client.java.cluster.BucketSettings;
-import com.couchbase.client.java.cluster.ClusterManager;
 import com.couchbase.client.java.document.JsonDocument;
 import com.couchbase.client.java.document.RawJsonDocument;
 import com.couchbase.client.java.document.json.JsonObject;
@@ -31,7 +28,7 @@ import com.couchbase.client.java.error.DocumentAlreadyExistsException;
  *
  */
 public class CopyOfCouchBaseTest2 {
-    private static final Logger logger = LoggerFactory.getLogger(CopyOfCouchBaseTest2.class);
+    private static final Logger logger = LoggerFactory.getLogger(CopyOfCouchBaseTest.class);
 
     private static final Cluster cluster;
 
@@ -53,37 +50,38 @@ public class CopyOfCouchBaseTest2 {
 
     @SuppressWarnings("unchecked")
     public void init(final String account, final String userid, final Long amount, final String flowid) {
+        // 将状态置为初始状态
         EnumStepStatus status = EnumStepStatus.INIT;
         String key = null;
         JsonDocument js = null;
         try {
 
-            // step one,��¼�ʽ���ˮ,�õ���ˮid
+            // step one,记录资金流水,得到流水id
             {
-                // ��¼�ʽ���ˮ����
+                // 记录资金流水代码
             }
-            // ��¼�ʽ���ˮ�ɹ������״̬
+            // 记录资金流水成功后更新状态
             status = EnumStepStatus.FUNDFLOWLOG;
 
-            // step two �����ʽ�����־, �����ʽ��˺�+��ˮ����key
+            // step two 缓存资金变更日志, 根据资金账号+流水号作key
             key = account + "->" + flowid;
             logger.debug("flowid:{}", key);
             js = JsonDocument.create(key, JsonObject.empty().put(key, amount));
             bucket.insert(js);
-            // ����״̬
+            // 更新状态
             status = EnumStepStatus.CACHELOG;
 
-            // step three �����ʽ����, �ʽ��˺�Ϊkey
+            // step three 缓存资金更新, 资金账号为key
 
             RawJsonDocument jsonDocument = bucket.get(account, RawJsonDocument.class);
             if (null == jsonDocument) {
                 // lock.lock();
                 try {
-                    // ��ѯ���ݿ��ȡ�ʽ��˻� ���, �����currentAmount��ʾ
+                    // 查询数据库获取资金账户 余额, 余额用currentAmount表示
                     {
-                        // ��ѯ�ʽ�������
+                        // 查询资金余额代码
                     }
-                    long currentAmount = 1000;// û�л�ȡ�Ĵ���,Ĭ�ϸ�1000�ĳ�ʼֵ
+                    long currentAmount = 1000;// 没有获取的代码,默认给1000的初始值
                     FundMoney fm = new FundMoney();
                     fm.setCurrBalance(1000l);
                     fm.setUseBalance(0l);
@@ -139,16 +137,15 @@ public class CopyOfCouchBaseTest2 {
                 }
 
             }
-           
             status = EnumStepStatus.UPDATEFUNDCAHE;
 
-            // step four ����������ص����ݿ�
+            // step four 缓存数据落地到数据库
             {
-                // ��ش���
+                // 落地代码
             }
             status = EnumStepStatus.UPDATEDB;
 
-            // step five ɾ�������ʽ�����־
+            // step five 删除缓存资金变更日志
             logger.debug("*******************start*****************");
             bucket.remove(js);
             logger.debug("*******************end*****************");
@@ -157,19 +154,19 @@ public class CopyOfCouchBaseTest2 {
             logger.error(e.getMessage());
             switch (status.getResult()) {
                 case EnumStepStatus.init:
-                    logger.error("��¼�ʽ���ˮʧ��, ʧ����Ϣ", e);
+                    logger.error("记录资金流水失败, 失败信息", e);
                     initError(e, js, key);
                     break;
                 case EnumStepStatus.fundFlowLog:
-                    logger.error("�����ʽ�����־ʧ��, ʧ����Ϣ", e);
+                    logger.error("缓存资金变更日志失败, 失败信息", e);
                     fundFlowLogError(e, key);
                     break;
                 case EnumStepStatus.cacheLog:
-                    logger.error("�����ʽ����ʧ��, ʧ��ԭ�� ", e);
+                    logger.error("缓存资金更新失败, 失败原因 ", e);
                     cacheLogError(e, js, key);
                     break;
                 case EnumStepStatus.updateDB:
-                    logger.error("��ص����ݿ�ʧ��, ʧ��ԭ��", e);
+                    logger.error("落地到数据库失败, 失败原因", e);
                     updateDBError(e, account, key);
                     break;
                 default:
@@ -205,13 +202,13 @@ public class CopyOfCouchBaseTest2 {
                 }
                 break;
             }
-            // �����ʽ����ع�
-            // ɾ�����������־
+            // 缓存资金余额回滚
+            // 删除缓存操作日志
         }
     }
 
     private void cacheLogError(Exception e, JsonDocument js, String key) {
-        // ֱ��ɾ��ǰ��Ļ�������־
+        // 直接删除前面的缓存变更日志
         bucket.remove(js);
     }
 
@@ -225,7 +222,7 @@ public class CopyOfCouchBaseTest2 {
 
     public static void main(String[] args) {
         ExecutorService fixedThreadPool = Executors.newFixedThreadPool(10);
-        final CopyOfCouchBaseTest2 test = new CopyOfCouchBaseTest2();
+        final CopyOfCouchBaseTest test = new CopyOfCouchBaseTest();
         for (int i = 0; i < 10; i++) {
             fixedThreadPool.execute(new Runnable() {
                 @Override
